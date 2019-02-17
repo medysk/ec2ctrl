@@ -8,6 +8,8 @@ export EC2_LIBEXEC="${EC2_HOME}/libexec"
 source ${EC2_LIB}/ec2_helper.sh
 source ${EC2_LIB}/ec2_usage.sh
 
+cd "$EC2_HOME"
+
 if [ ! -f "${EC2_HOME}/instances" ]; then
   init_instances_info
 fi
@@ -18,13 +20,13 @@ fi
 
 while [ 0 -ne "$#" ]; do
   case "$1" in
-    --version ) $(git describe --tags) ;;
+    --version ) git describe --tags ;;
     --help ) usage; exit 0 ;;
     --debug ) set -x ;;
     -[a-zA-Z]* )
       while getopts vdh OPT; do
         case $OPT in
-          v ) cat ${EC2_HOME}/version; exit 0 ;;
+          v ) git describe --tags ;;
           h ) usage; exit 0 ;;
           d ) set -x ;;
           \? ) abort "$0: 不正なオプションです ${arg}" ;;
