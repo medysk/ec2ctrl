@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "production",
+    "Host": "localhost",
+    "Profile": "oregon",
+    "Port": 22,
+    "User": "ec2-user",
+    "IdentityFile": "~/.ssh/aws_rsa.pem"
+  },
+  {
+    "Name": "staging",
+    "Host": "localhost",
+    "Profile": "oregon",
+    "Port": 22,
+    "User": "ec2-user",
+    "IdentityFile": "~/.ssh/aws_rsa.pem"
+  }
+]

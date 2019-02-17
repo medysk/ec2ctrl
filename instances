@@ -1,0 +1,26 @@
+[
+  {
+    "InstanceName": "production",
+    "Host": "localhost",
+    "Profile": "oregon",
+    "Port": 22,
+    "User": "ec2-user",
+    "IdentityFile": "~/.ssh/aws_rsa.pem"
+  },
+  {
+    "InstanceName": "staging",
+    "Host": "172.31.27.54",
+    "Profile": "oregon",
+    "Port": 22,
+    "User": "ec2-user",
+    "IdentityFile": "~/.ssh/aws_rsa.pem"
+  },
+  {
+    "InstanceName": "test",
+    "Host": "36.55.230.31",
+    "Profile": "default",
+    "Port": "1984",
+    "User": "webadmin",
+    "IdentityFile": "~/.ssh/id_rsa"
+  }
+]
